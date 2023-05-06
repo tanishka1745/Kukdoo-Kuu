@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.LoginActivity">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:src="@drawable/icon"
+        android:id="@+id/image"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_height="180dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_below="@id/image"
+        android:id="@+id/login_email"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Enter email"
+        android:layout_height="48dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_below="@id/login_email"
+        android:id="@+id/login_pass"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Password"
+        android:layout_height="48dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_below="@id/login_pass"
+        android:layout_marginTop="20dp"
+        android:id="@+id/login"
+        android:background="@drawable/button"
+        android:layout_marginLeft="50dp"
+        android:text="Login"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_below="@id/login_pass"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:layout_alignLeft="@id/login"
+        android:text="Register"
+        android:id="@+id/register"
+        android:background="@drawable/button"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@id/login"
+        android:text="Forgot password? Reset here"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:id="@+id/forgot"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
