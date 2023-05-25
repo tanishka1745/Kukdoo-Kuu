@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "777586378141",
+    "project_id": "kukdooku-f6b70",
+    "storage_bucket": "kukdooku-f6b70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777586378141:android:c58bdd71f79a91f53cdb74",
+        "android_client_info": {
+          "package_name": "com.example.Kukdookuu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777586378141-ablpvmncn2pf5ebhgmoi6fh09rboilmp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA75dOMrWv8xJ-mPEYqi5Xu8U7sg2lfAy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777586378141-ablpvmncn2pf5ebhgmoi6fh09rboilmp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
