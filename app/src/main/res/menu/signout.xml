@@ -6,7 +6,7 @@
 
     <item
         android:id="@+id/items1"
-        android:title="Log Out"/>
+        android:title="Sign Out"/>
 
 
 

@@ -1,6 +1,7 @@
 package com.example;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.ThemedSpinnerAdapter;
 import androidx.appcompat.widget.Toolbar;
@@ -8,6 +9,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,6 +17,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.ViewPagerAdapter;
+
 import com.example.kukdookuu.R;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     ViewPagerAdapter viewPagerAdapter;
     ViewPager2 viewPager2;
-    String []titles= new String[]{"Home","Health","Science","Technology","Entertainment"};
+    String []titles= new String[]{"Home","Health","Science","Tech","Fun"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +63,21 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.items1:
                 Toast.makeText(this, "Log Out here", Toast.LENGTH_SHORT).show();
+                firebaseAuth.signOut();
                 startActivity(new Intent(this,LoginActivity.class));
                 firebaseAuth=null;
+                finish();
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
     }
 }

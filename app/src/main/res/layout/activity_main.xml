@@ -6,29 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:background="@color/red"
-        android:id="@+id/toolbar"
-        android:layout_height="50dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="KuKdooKu"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_height="wrap_content">
-        </TextView>
-    </androidx.appcompat.widget.Toolbar>
+
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:layout_below="@id/toolbar"
         android:id="@+id/tablayout"
         app:tabTextAppearance="@style/TextAppearancce"
-        android:background="@color/red"
+        android:background="@color/maroon"
         app:tabTextColor="@color/white"
         app:tabSelectedTextColor="@color/white"
-        app:tabIndicatorColor="@color/red"
+        app:tabIndicatorColor="@color/maroon"
         android:layout_height="wrap_content"/>
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"

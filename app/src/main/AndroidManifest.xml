@@ -14,6 +14,9 @@
         android:theme="@style/Theme.KukdooKuu"
         tools:targetApi="31">
         <activity
+            android:name="com.example.ForgotPassword"
+            android:exported="false" />
+        <activity
             android:name="com.example.SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -27,16 +30,13 @@
             android:exported="false" />
         <activity
             android:name="com.example.LoginActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name="com.example.WebView"
             android:exported="false" />
         <activity
             android:name="com.example.MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

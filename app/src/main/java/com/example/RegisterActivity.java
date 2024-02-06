@@ -51,37 +51,38 @@ public class RegisterActivity extends AppCompatActivity {
                 String e=reg_email.getText().toString();
                 String p=reg_pass.getText().toString();
                 String r=reg_re_pass.getText().toString();
-                if(p.equals(r))
+                if(e.isEmpty() || p.isEmpty() || r.isEmpty())
+                {
+                    Toast.makeText(RegisterActivity.this, "Fill all fields required", Toast.LENGTH_SHORT).show();
+                }
+                else if(p.equals(r))
                 {
                     firebaseAuth.createUserWithEmailAndPassword(e,p).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            sendEmailVerification();
+                           if(task.isSuccessful())
+                           {
+                               firebaseAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                   @Override
+                                   public void onComplete(@NonNull Task<Void> task) {
+                                       if(task.isSuccessful())
+                                       {
+                                           Toast.makeText(RegisterActivity.this, "Please verify your email", Toast.LENGTH_SHORT).show();
+                                       }
+                                       else{
+                                           Toast.makeText(RegisterActivity.this, "Verification failed", Toast.LENGTH_SHORT).show();
+                                       }
+                                   }
+                               });
+                           }
+                           else{
+                               Toast.makeText(RegisterActivity.this, "Already sign in", Toast.LENGTH_SHORT).show();
+                           }
                         }
                     });
                 }
 
             }
         });
-    }
-    private void sendEmailVerification()
-    {
-        FirebaseUser firebaseUser= firebaseAuth.getCurrentUser();
-        if(firebaseUser!=null)
-        {
-            firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    Toast.makeText(getApplicationContext(),"Verification Email is sent, Verify and Log In again",Toast.LENGTH_SHORT).show();
-                    firebaseAuth.signOut();
-                    finish();
-                    startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-                }
-            });
-        }
-        else
-        {
-            Toast.makeText(getApplicationContext(),"Failed to sent verification Email",Toast.LENGTH_SHORT).show();
-        }
     }
 }
