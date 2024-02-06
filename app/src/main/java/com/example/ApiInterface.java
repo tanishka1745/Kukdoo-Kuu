@@ -26,6 +26,4 @@ public interface ApiInterface {
             @Query("pageSize") int pagesize,
             @Query("apiKey") String apiKey
     );
-
-
 }

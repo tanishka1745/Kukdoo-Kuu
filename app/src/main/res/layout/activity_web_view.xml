@@ -21,7 +21,7 @@
                 android:text="Kukdoo Kuu"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:textColor="@color/maroon">
+                android:textColor="@color/dark">
             </TextView>
 
         </RelativeLayout>

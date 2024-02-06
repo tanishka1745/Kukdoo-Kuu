@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/maroon"
+    android:background="@color/dark"
     android:orientation="vertical"
     tools:context="com.example.SplashScreen">
 
@@ -16,7 +16,6 @@
         android:text="KuKdoo Koo"
         android:textColor="@color/white"
         android:textSize="36sp"
-        android:fontFamily="@font/ff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
